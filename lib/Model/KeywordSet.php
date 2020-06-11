@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Metatavu\LinkedEvents
+ * @package  Metatavu\\LinkedEvents
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Metatavu\LinkedEvents\Model;
+namespace Metatavu\\LinkedEvents\Model;
 
 use \ArrayAccess;
 
@@ -36,7 +36,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description Keyword sets are used to group keywords together into classification groups. For example, one set of keywords might describe themes used by an event provider and another could be used to describe audience groups.
- * @package     Metatavu\LinkedEvents
+ * @package     Metatavu\\LinkedEvents
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -64,7 +64,7 @@ class KeywordSet implements ArrayAccess
         'lastModifiedBy' => 'string',
         'usage' => 'string',
         'organization' => 'string',
-        'keywords' => '\Metatavu\LinkedEvents\Model\Keyword[]'
+        'keywords' => '\Metatavu\\LinkedEvents\Model\Keyword[]'
     ];
 
     /**
@@ -461,7 +461,7 @@ class KeywordSet implements ArrayAccess
 
     /**
      * Gets keywords
-     * @return \Metatavu\LinkedEvents\Model\Keyword[]
+     * @return \Metatavu\\LinkedEvents\Model\Keyword[]
      */
     public function getKeywords()
     {
@@ -470,7 +470,7 @@ class KeywordSet implements ArrayAccess
 
     /**
      * Sets keywords
-     * @param \Metatavu\LinkedEvents\Model\Keyword[] $keywords Keywords that belong to this keyword_set
+     * @param \Metatavu\\LinkedEvents\Model\Keyword[] $keywords Keywords that belong to this keyword_set
      * @return $this
      */
     public function setKeywords($keywords)
@@ -531,10 +531,10 @@ class KeywordSet implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Metatavu\\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Metatavu\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Metatavu\\LinkedEvents\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

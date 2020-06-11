@@ -1,4 +1,4 @@
-# Metatavu\LinkedEvents\FilterApi
+# Metatavu\\LinkedEvents\FilterApi
 
 All URIs are relative to *https://api.hel.fi/linkedevents/v1*
 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **keywordCreate**
-> \Metatavu\LinkedEvents\Model\Keyword keywordCreate($keywordObject)
+> \Metatavu\\LinkedEvents\Model\Keyword keywordCreate($keywordObject)
 
 Creates new keyword
 
@@ -30,8 +30,8 @@ Endpoint for creating new keywords
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
-$keywordObject = new \Metatavu\LinkedEvents\Model\Keyword(); // \Metatavu\LinkedEvents\Model\Keyword | 
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
+$keywordObject = new \Metatavu\\LinkedEvents\Model\Keyword(); // \Metatavu\\LinkedEvents\Model\Keyword | 
 
 try {
     $result = $api_instance->keywordCreate($keywordObject);
@@ -46,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **keywordObject** | [**\Metatavu\LinkedEvents\Model\Keyword**](../Model/Keyword.md)|  | [optional]
+ **keywordObject** | [**\Metatavu\\LinkedEvents\Model\Keyword**](../Model/Keyword.md)|  | [optional]
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\Keyword**](../Model/Keyword.md)
+[**\Metatavu\\LinkedEvents\Model\Keyword**](../Model/Keyword.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Deletes a keyword
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
 $id = "id_example"; // string | Identifier for the keyword to be deleted
 
 try {
@@ -108,7 +108,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordList**
-> \Metatavu\LinkedEvents\Model\InlineResponse2002 keywordList($page, $pageSize, $include, $showAllKeywords, $dataSource, $text, $sort)
+> \Metatavu\\LinkedEvents\Model\InlineResponse2002 keywordList($page, $pageSize, $include, $showAllKeywords, $dataSource, $text, $sort)
 
 Returns a list of keywords used for describing events
 
@@ -119,7 +119,7 @@ Returns a list of keywords used for describing events
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
 $page = 56; // int | request particular page in paginated results
 $pageSize = 56; // int | request that server delivers page_size results in response
 $include = array("include_example"); // string[] | Embed given reference-type fields directly into the response, otherwise they are returned as URI references.
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Metatavu\\LinkedEvents\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordRetrieve**
-> \Metatavu\LinkedEvents\Model\Keyword keywordRetrieve($id)
+> \Metatavu\\LinkedEvents\Model\Keyword keywordRetrieve($id)
 
 Return information for single keyword
 
@@ -174,7 +174,7 @@ Return information for single keyword
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
 $id = "id_example"; // string | Same as id in keyword schema
 
 try {
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\Keyword**](../Model/Keyword.md)
+[**\Metatavu\\LinkedEvents\Model\Keyword**](../Model/Keyword.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordSetList**
-> \Metatavu\LinkedEvents\Model\InlineResponse2003 keywordSetList($page, $pageSize, $include)
+> \Metatavu\\LinkedEvents\Model\InlineResponse2003 keywordSetList($page, $pageSize, $include)
 
 Return as list of keyword_sets for grouping keywords
 
@@ -219,7 +219,7 @@ Unlike other endpoints, keyword_sets do not support filtering. It is expected th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
 $page = 56; // int | request particular page in paginated results
 $pageSize = 56; // int | request that server delivers page_size results in response
 $include = array("include_example"); // string[] | Embed given reference-type fields directly into the response, otherwise they are returned as URI references.
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Metatavu\\LinkedEvents\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -257,7 +257,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordSetRetrieve**
-> \Metatavu\LinkedEvents\Model\KeywordSet keywordSetRetrieve($id)
+> \Metatavu\\LinkedEvents\Model\KeywordSet keywordSetRetrieve($id)
 
 Return information about single keyword_set
 
@@ -266,7 +266,7 @@ Return information about single keyword_set
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
 $id = "id_example"; // string | Same as id in keyword_set schema
 
 try {
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\KeywordSet**](../Model/KeywordSet.md)
+[**\Metatavu\\LinkedEvents\Model\KeywordSet**](../Model/KeywordSet.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **keywordUpdate**
-> \Metatavu\LinkedEvents\Model\Keyword keywordUpdate($id, $keywordObject)
+> \Metatavu\\LinkedEvents\Model\Keyword keywordUpdate($id, $keywordObject)
 
 Update a keyword
 
@@ -311,9 +311,9 @@ Keywords can be updated if the user has appropriate access permissions.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
 $id = "id_example"; // string | Identifier for the keyword to be updated
-$keywordObject = new \Metatavu\LinkedEvents\Model\Keyword(); // \Metatavu\LinkedEvents\Model\Keyword | Keyword object that should replace the existing keyword
+$keywordObject = new \Metatavu\\LinkedEvents\Model\Keyword(); // \Metatavu\\LinkedEvents\Model\Keyword | Keyword object that should replace the existing keyword
 
 try {
     $result = $api_instance->keywordUpdate($id, $keywordObject);
@@ -329,11 +329,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Identifier for the keyword to be updated |
- **keywordObject** | [**\Metatavu\LinkedEvents\Model\Keyword**](../Model/Keyword.md)| Keyword object that should replace the existing keyword | [optional]
+ **keywordObject** | [**\Metatavu\\LinkedEvents\Model\Keyword**](../Model/Keyword.md)| Keyword object that should replace the existing keyword | [optional]
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\Keyword**](../Model/Keyword.md)
+[**\Metatavu\\LinkedEvents\Model\Keyword**](../Model/Keyword.md)
 
 ### Authorization
 
@@ -347,7 +347,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **placeCreate**
-> \Metatavu\LinkedEvents\Model\Place placeCreate($placeObject)
+> \Metatavu\\LinkedEvents\Model\Place placeCreate($placeObject)
 
 Creates new place
 
@@ -358,8 +358,8 @@ Endpoint for creating new places
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
-$placeObject = new \Metatavu\LinkedEvents\Model\Place(); // \Metatavu\LinkedEvents\Model\Place | 
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
+$placeObject = new \Metatavu\\LinkedEvents\Model\Place(); // \Metatavu\\LinkedEvents\Model\Place | 
 
 try {
     $result = $api_instance->placeCreate($placeObject);
@@ -374,11 +374,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **placeObject** | [**\Metatavu\LinkedEvents\Model\Place**](../Model/Place.md)|  | [optional]
+ **placeObject** | [**\Metatavu\\LinkedEvents\Model\Place**](../Model/Place.md)|  | [optional]
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\Place**](../Model/Place.md)
+[**\Metatavu\\LinkedEvents\Model\Place**](../Model/Place.md)
 
 ### Authorization
 
@@ -403,7 +403,7 @@ Deletes a place
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
 $id = "id_example"; // string | Identifier for the place to be deleted
 
 try {
@@ -436,7 +436,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **placeList**
-> \Metatavu\LinkedEvents\Model\InlineResponse2004 placeList($page, $pageSize, $showAllPlaces, $division, $dataSource, $text, $sort)
+> \Metatavu\\LinkedEvents\Model\InlineResponse2004 placeList($page, $pageSize, $showAllPlaces, $division, $dataSource, $text, $sort)
 
 Returns list of places used for describing events
 
@@ -447,7 +447,7 @@ Returns list of places used for describing events
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
 $page = 56; // int | request particular page in paginated results
 $pageSize = 56; // int | request that server delivers page_size results in response
 $showAllPlaces = true; // bool | Show all places, including those that are not hosting any events. Otherwise such places are hidden. When show_all_places is specified, no other filter is applied.
@@ -479,7 +479,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Metatavu\\LinkedEvents\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -493,7 +493,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **placeRetrieve**
-> \Metatavu\LinkedEvents\Model\Place placeRetrieve($id)
+> \Metatavu\\LinkedEvents\Model\Place placeRetrieve($id)
 
 Return information for single place
 
@@ -502,7 +502,7 @@ Return information for single place
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
 $id = "id_example"; // string | Id as defined in place model
 
 try {
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\Place**](../Model/Place.md)
+[**\Metatavu\\LinkedEvents\Model\Place**](../Model/Place.md)
 
 ### Authorization
 
@@ -536,7 +536,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **placeUpdate**
-> \Metatavu\LinkedEvents\Model\Place placeUpdate($id, $placeObject)
+> \Metatavu\\LinkedEvents\Model\Place placeUpdate($id, $placeObject)
 
 Update a place
 
@@ -547,9 +547,9 @@ Place can be updated if the user has appropriate access permissions.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\FilterApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\FilterApi();
 $id = "id_example"; // string | Identifier for the place to be updated
-$placeObject = new \Metatavu\LinkedEvents\Model\Place(); // \Metatavu\LinkedEvents\Model\Place | Place object that should replace the existing place.
+$placeObject = new \Metatavu\\LinkedEvents\Model\Place(); // \Metatavu\\LinkedEvents\Model\Place | Place object that should replace the existing place.
 
 try {
     $result = $api_instance->placeUpdate($id, $placeObject);
@@ -565,11 +565,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Identifier for the place to be updated |
- **placeObject** | [**\Metatavu\LinkedEvents\Model\Place**](../Model/Place.md)| Place object that should replace the existing place. | [optional]
+ **placeObject** | [**\Metatavu\\LinkedEvents\Model\Place**](../Model/Place.md)| Place object that should replace the existing place. | [optional]
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\Place**](../Model/Place.md)
+[**\Metatavu\\LinkedEvents\Model\Place**](../Model/Place.md)
 
 ### Authorization
 

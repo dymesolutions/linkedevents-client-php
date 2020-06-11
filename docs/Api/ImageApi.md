@@ -1,4 +1,4 @@
-# Metatavu\LinkedEvents\ImageApi
+# Metatavu\\LinkedEvents\ImageApi
 
 All URIs are relative to *https://api.hel.fi/linkedevents/v1*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **imageCreate**
-> \Metatavu\LinkedEvents\Model\Image imageCreate($imageFile, $imageObject)
+> \Metatavu\\LinkedEvents\Model\Image imageCreate($imageFile, $imageObject)
 
 Create a new image
 
@@ -22,9 +22,9 @@ There are two ways to create an image object. The image file can be posted as a 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\ImageApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\ImageApi();
 $imageFile = "/path/to/file.txt"; // \SplFileObject | 
-$imageObject = new \Metatavu\LinkedEvents\Model\ImageUrl(); // \Metatavu\LinkedEvents\Model\ImageUrl | 
+$imageObject = new \Metatavu\\LinkedEvents\Model\ImageUrl(); // \Metatavu\\LinkedEvents\Model\ImageUrl | 
 
 try {
     $result = $api_instance->imageCreate($imageFile, $imageObject);
@@ -40,11 +40,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **imageFile** | **\SplFileObject**|  | [optional]
- **imageObject** | [**\Metatavu\LinkedEvents\Model\ImageUrl**](../Model/ImageUrl.md)|  | [optional]
+ **imageObject** | [**\Metatavu\\LinkedEvents\Model\ImageUrl**](../Model/ImageUrl.md)|  | [optional]
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\Image**](../Model/Image.md)
+[**\Metatavu\\LinkedEvents\Model\Image**](../Model/Image.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageList**
-> \Metatavu\LinkedEvents\Model\InlineResponse2001 imageList($page, $pageSize, $include, $sort)
+> \Metatavu\\LinkedEvents\Model\InlineResponse2001 imageList($page, $pageSize, $include, $sort)
 
 Returns a list of images
 
@@ -69,7 +69,7 @@ Image endpoint returns images that are used for events, places or organizers.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\ImageApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\ImageApi();
 $page = 56; // int | request particular page in paginated results
 $pageSize = 56; // int | request that server delivers page_size results in response
 $include = array("include_example"); // string[] | Embed given reference-type fields directly into the response, otherwise they are returned as URI references.
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Metatavu\\LinkedEvents\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageRetrieve**
-> \Metatavu\LinkedEvents\Model\Image imageRetrieve($id)
+> \Metatavu\\LinkedEvents\Model\Image imageRetrieve($id)
 
 Return information for single image
 
@@ -118,7 +118,7 @@ Return information for single image
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\ImageApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\ImageApi();
 $id = "id_example"; // string | The id for the image
 
 try {
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\Image**](../Model/Image.md)
+[**\Metatavu\\LinkedEvents\Model\Image**](../Model/Image.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imageUpdate**
-> \Metatavu\LinkedEvents\Model\Image imageUpdate($id, $imageObject)
+> \Metatavu\\LinkedEvents\Model\Image imageUpdate($id, $imageObject)
 
 Update an image
 
@@ -163,9 +163,9 @@ Images can be updated if the user has appropriate access permissions. The origin
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Metatavu\LinkedEvents\Api\ImageApi();
+$api_instance = new Metatavu\\LinkedEvents\Api\ImageApi();
 $id = "id_example"; // string | Identifier for the image to be updated
-$imageObject = new \Metatavu\LinkedEvents\Model\Image(); // \Metatavu\LinkedEvents\Model\Image | Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values.
+$imageObject = new \Metatavu\\LinkedEvents\Model\Image(); // \Metatavu\\LinkedEvents\Model\Image | Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values.
 
 try {
     $result = $api_instance->imageUpdate($id, $imageObject);
@@ -181,11 +181,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Identifier for the image to be updated |
- **imageObject** | [**\Metatavu\LinkedEvents\Model\Image**](../Model/Image.md)| Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values. | [optional]
+ **imageObject** | [**\Metatavu\\LinkedEvents\Model\Image**](../Model/Image.md)| Image object that should replace the existing image, note that some implementations may retain unspecified fields at their original values. | [optional]
 
 ### Return type
 
-[**\Metatavu\LinkedEvents\Model\Image**](../Model/Image.md)
+[**\Metatavu\\LinkedEvents\Model\Image**](../Model/Image.md)
 
 ### Authorization
 

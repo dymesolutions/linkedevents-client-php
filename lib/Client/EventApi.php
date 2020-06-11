@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Metatavu\LinkedEvents
+ * @package  Metatavu\\LinkedEvents
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Metatavu\LinkedEvents\Client;
+namespace Metatavu\\LinkedEvents\Client;
 
-use \Metatavu\LinkedEvents\ApiClient;
-use \Metatavu\LinkedEvents\ApiException;
-use \Metatavu\LinkedEvents\Configuration;
-use \Metatavu\LinkedEvents\ObjectSerializer;
+use \Metatavu\\LinkedEvents\ApiClient;
+use \Metatavu\\LinkedEvents\ApiException;
+use \Metatavu\\LinkedEvents\Configuration;
+use \Metatavu\\LinkedEvents\ObjectSerializer;
 
 /**
  * EventApi Class Doc Comment
  *
  * @category Class
- * @package  Metatavu\LinkedEvents
+ * @package  Metatavu\\LinkedEvents
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class EventApi
     /**
      * API Client
      *
-     * @var \Metatavu\LinkedEvents\ApiClient instance of the ApiClient
+     * @var \Metatavu\\LinkedEvents\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Metatavu\LinkedEvents\ApiClient|null $apiClient The api client to use
+     * @param \Metatavu\\LinkedEvents\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Metatavu\LinkedEvents\ApiClient $apiClient = null)
+    public function __construct(\Metatavu\\LinkedEvents\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class EventApi
     /**
      * Get API client
      *
-     * @return \Metatavu\LinkedEvents\ApiClient get the API client
+     * @return \Metatavu\\LinkedEvents\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class EventApi
     /**
      * Set the API client
      *
-     * @param \Metatavu\LinkedEvents\ApiClient $apiClient set the API client
+     * @param \Metatavu\\LinkedEvents\ApiClient $apiClient set the API client
      *
      * @return EventApi
      */
-    public function setApiClient(\Metatavu\LinkedEvents\ApiClient $apiClient)
+    public function setApiClient(\Metatavu\\LinkedEvents\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -92,9 +92,9 @@ class EventApi
      *
      * Create a new event
      *
-     * @param \Metatavu\LinkedEvents\Model\Event $eventObject  (optional)
-     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return \Metatavu\LinkedEvents\Model\Event
+     * @param \Metatavu\\LinkedEvents\Model\Event $eventObject  (optional)
+     * @throws \Metatavu\\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\\LinkedEvents\Model\Event
      */
     public function eventCreate($eventObject = null)
     {
@@ -107,9 +107,9 @@ class EventApi
      *
      * Create a new event
      *
-     * @param \Metatavu\LinkedEvents\Model\Event $eventObject  (optional)
-     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return array of \Metatavu\LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
+     * @param \Metatavu\\LinkedEvents\Model\Event $eventObject  (optional)
+     * @throws \Metatavu\\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\\LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventCreateWithHttpInfo($eventObject = null)
     {
@@ -145,15 +145,15 @@ class EventApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Metatavu\LinkedEvents\Model\Event',
+                '\Metatavu\\LinkedEvents\Model\Event',
                 '/event/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Model\Event', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\\LinkedEvents\Model\Event', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -168,7 +168,7 @@ class EventApi
      * Delete an event
      *
      * @param string $id Identifier for the event to be deleted (required)
-     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @throws \Metatavu\\LinkedEvents\ApiException on non-2xx response
      * @return void
      */
     public function eventDelete($id)
@@ -183,7 +183,7 @@ class EventApi
      * Delete an event
      *
      * @param string $id Identifier for the event to be deleted (required)
-     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
+     * @throws \Metatavu\\LinkedEvents\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventDeleteWithHttpInfo($id)
@@ -267,8 +267,8 @@ class EventApi
      * @param string $addressLocalitySv Search for events in given address localities (sv). Multiple localities can be entered by separating them by a comma (optional)
      * @param string $addressLocalityEn Search for events in given address localities (en). Multiple localities can be entered by separating them by a comma (optional)
      * @param string $publicationStatus Filter events by publication status (either draft or public) (optional)
-     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return \Metatavu\LinkedEvents\Model\InlineResponse200
+     * @throws \Metatavu\\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\\LinkedEvents\Model\InlineResponse200
      */
     public function eventList($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $showAll = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null, $page = null, $pageSize = null, $addressLocalityFi = null, $addressLocalitySv = null, $addressLocalityEn = null, $publicationStatus = null)
     {
@@ -303,8 +303,8 @@ class EventApi
      * @param string $addressLocalitySv Search for events in given address localities (sv). Multiple localities can be entered by separating them by a comma (optional)
      * @param string $addressLocalityEn Search for events in given address localities (en). Multiple localities can be entered by separating them by a comma (optional)
      * @param string $publicationStatus Filter events by publication status (either draft or public) (optional)
-     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return array of \Metatavu\LinkedEvents\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Metatavu\\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\\LinkedEvents\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventListWithHttpInfo($include = null, $text = null, $lastModifiedSince = null, $start = null, $end = null, $bbox = null, $dataSource = null, $location = null, $showAll = null, $division = null, $keyword = null, $recurring = null, $minDuration = null, $maxDuration = null, $publisher = null, $sort = null, $page = null, $pageSize = null, $addressLocalityFi = null, $addressLocalitySv = null, $addressLocalityEn = null, $publicationStatus = null)
     {
@@ -439,15 +439,15 @@ class EventApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Metatavu\LinkedEvents\Model\InlineResponse200',
+                '\Metatavu\\LinkedEvents\Model\InlineResponse200',
                 '/event/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\\LinkedEvents\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Model\InlineResponse200', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\\LinkedEvents\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -463,8 +463,8 @@ class EventApi
      *
      * @param string $id Event identifier as defined in event schema (required)
      * @param string[] $include Embed given reference-type fields directly into the response, otherwise they are returned as URI references. (optional)
-     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return \Metatavu\LinkedEvents\Model\Event
+     * @throws \Metatavu\\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\\LinkedEvents\Model\Event
      */
     public function eventRetrieve($id, $include = null)
     {
@@ -479,8 +479,8 @@ class EventApi
      *
      * @param string $id Event identifier as defined in event schema (required)
      * @param string[] $include Embed given reference-type fields directly into the response, otherwise they are returned as URI references. (optional)
-     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return array of \Metatavu\LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Metatavu\\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\\LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventRetrieveWithHttpInfo($id, $include = null)
     {
@@ -530,15 +530,15 @@ class EventApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Metatavu\LinkedEvents\Model\Event',
+                '\Metatavu\\LinkedEvents\Model\Event',
                 '/event/{id}/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Model\Event', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\\LinkedEvents\Model\Event', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -553,9 +553,9 @@ class EventApi
      * Update an event
      *
      * @param string $id Identifier for the event to be updated (required)
-     * @param \Metatavu\LinkedEvents\Model\Event $eventObject Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. (optional)
-     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return \Metatavu\LinkedEvents\Model\Event
+     * @param \Metatavu\\LinkedEvents\Model\Event $eventObject Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. (optional)
+     * @throws \Metatavu\\LinkedEvents\ApiException on non-2xx response
+     * @return \Metatavu\\LinkedEvents\Model\Event
      */
     public function eventUpdate($id, $eventObject = null)
     {
@@ -569,9 +569,9 @@ class EventApi
      * Update an event
      *
      * @param string $id Identifier for the event to be updated (required)
-     * @param \Metatavu\LinkedEvents\Model\Event $eventObject Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. (optional)
-     * @throws \Metatavu\LinkedEvents\ApiException on non-2xx response
-     * @return array of \Metatavu\LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
+     * @param \Metatavu\\LinkedEvents\Model\Event $eventObject Event object that should replace the existing event, note that some implementations may retain unspecified fields at their original values. (optional)
+     * @throws \Metatavu\\LinkedEvents\ApiException on non-2xx response
+     * @return array of \Metatavu\\LinkedEvents\Model\Event, HTTP status code, HTTP response headers (array of strings)
      */
     public function eventUpdateWithHttpInfo($id, $eventObject = null)
     {
@@ -619,15 +619,15 @@ class EventApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Metatavu\LinkedEvents\Model\Event',
+                '\Metatavu\\LinkedEvents\Model\Event',
                 '/event/{id}/'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Metatavu\\LinkedEvents\Model\Event', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\LinkedEvents\Model\Event', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Metatavu\\LinkedEvents\Model\Event', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
