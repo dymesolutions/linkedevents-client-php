@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Metatavu\\LinkedEvents
+ * @package  Metatavu\LinkedEvents
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,14 +26,14 @@
  * Do not edit the class manually.
  */
 
-namespace Metatavu\\LinkedEvents;
+namespace Metatavu\LinkedEvents;
 
 /**
  * Configuration Class Doc Comment
  * PHP version 5
  *
  * @category Class
- * @package  Metatavu\\LinkedEvents
+ * @package  Metatavu\LinkedEvents
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -109,7 +109,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = 'Swagger-Codegen/0.0.14/php';
+    protected $userAgent = 'Swagger-Codegen/0.0.13/php';
 
     /**
      * Debug switch (default set to false)
@@ -724,11 +724,11 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (Metatavu\\LinkedEvents) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (Metatavu\LinkedEvents) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: v1' . PHP_EOL;
-        $report .= '    SDK Package Version: 0.0.14' . PHP_EOL;
+        $report .= '    SDK Package Version: 0.0.13' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;

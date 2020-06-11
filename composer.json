@@ -1,6 +1,6 @@
 {
   "name": "metatavu/linkedevents-php-client",
-  "version": "0.0.14",
+  "version": "0.0.13",
   "description": "",
   "keywords": [
     "swagger",
@@ -30,12 +30,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Metatavu\\\\LinkedEvents\\": "lib/"
+      "Metatavu\\LinkedEvents\\": "lib/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Metatavu\\\\LinkedEvents\\": "test/"
+      "Metatavu\\LinkedEvents\\": "test/"
     }
   }
 }
